@@ -25,6 +25,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table?.dataSource = self
     }
     
+    override func viewDidAppear(_ animated: Bool){
+            super.viewDidAppear(animated)
+            getData()
+        }
+    
     //Table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count
@@ -36,21 +41,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Get data from a file and convert to models
     func getData(){
-        //validate file exists
+        
+        //validate that file exists
+        let path = Bundle.main.path(forResource: "TestData1.json", ofType: nil)
+        guard let data = path else {
+            print("something went wrong")
+            return
+        }
         
         //convert data to models
-        var fileData: CellContent?
-        do {
-            
-        }
-        catch {
-            
-        }
-        
         //update user interface
-        
     }
-    
 }
 
 struct CellContent: Codable {
