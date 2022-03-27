@@ -16,8 +16,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        table.delegate = self
-        table.dataSource = self
+        // Register 1 cell
+        table.register(DarkMatterTableViewCell.nib(), forCellReuseIdentifier: DarkMatterTableViewCell.identifier)
+        
+        table?.delegate = self
+        table?.dataSource = self
     }
     
     //Table
@@ -28,9 +31,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
+    
+    // Get data from a file and convert to models
+    func getData(){
+        //validate file exists
+        
+        //convert data to models
+        var fileData: CellContent?
+        do {
+            
+        }
+        catch {
+            
+        }
+        
+        //update user interface
+        
+    }
+    
 }
 
 struct CellContent {
-    
+    let timeAndIndicator: String
 }
 
