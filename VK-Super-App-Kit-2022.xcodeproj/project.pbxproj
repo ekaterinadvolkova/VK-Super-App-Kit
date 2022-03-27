@@ -15,6 +15,7 @@
 		2273583E27F0E3F3004634D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2273583C27F0E3F3004634D8 /* LaunchScreen.storyboard */; };
 		2273584A27F0F6D6004634D8 /* DarkMatterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2273584827F0F6D6004634D8 /* DarkMatterTableViewCell.swift */; };
 		2273584B27F0F6D6004634D8 /* DarkMatterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2273584927F0F6D6004634D8 /* DarkMatterTableViewCell.xib */; };
+		2273584E27F1157A004634D8 /* TestData1.json in Resources */ = {isa = PBXBuildFile; fileRef = 2273584D27F11579004634D8 /* TestData1.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2273583F27F0E3F3004634D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2273584827F0F6D6004634D8 /* DarkMatterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkMatterTableViewCell.swift; sourceTree = "<group>"; };
 		2273584927F0F6D6004634D8 /* DarkMatterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DarkMatterTableViewCell.xib; sourceTree = "<group>"; };
+		2273584D27F11579004634D8 /* TestData1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestData1.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +62,11 @@
 		2273583027F0E3F1004634D8 /* VK-Super-App-Kit-2022 */ = {
 			isa = PBXGroup;
 			children = (
+				2273585127F1163E004634D8 /* Controllers */,
+				2273585027F11619004634D8 /* Views */,
+				2273584F27F11600004634D8 /* Resources */,
+				2273584C27F1148F004634D8 /* TestData */,
 				2273584527F0F674004634D8 /* DarkMatterCell */,
-				2273583127F0E3F1004634D8 /* AppDelegate.swift */,
-				2273583327F0E3F1004634D8 /* SceneDelegate.swift */,
-				2273583527F0E3F1004634D8 /* ViewController.swift */,
-				2273583727F0E3F1004634D8 /* Main.storyboard */,
-				2273583A27F0E3F3004634D8 /* Assets.xcassets */,
-				2273583C27F0E3F3004634D8 /* LaunchScreen.storyboard */,
 				2273583F27F0E3F3004634D8 /* Info.plist */,
 			);
 			path = "VK-Super-App-Kit-2022";
@@ -79,6 +79,41 @@
 				2273584927F0F6D6004634D8 /* DarkMatterTableViewCell.xib */,
 			);
 			path = DarkMatterCell;
+			sourceTree = "<group>";
+		};
+		2273584C27F1148F004634D8 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				2273584D27F11579004634D8 /* TestData1.json */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+		2273584F27F11600004634D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2273583127F0E3F1004634D8 /* AppDelegate.swift */,
+				2273583327F0E3F1004634D8 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2273585027F11619004634D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2273583727F0E3F1004634D8 /* Main.storyboard */,
+				2273583A27F0E3F3004634D8 /* Assets.xcassets */,
+				2273583C27F0E3F3004634D8 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2273585127F1163E004634D8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2273583527F0E3F1004634D8 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +177,7 @@
 				2273583E27F0E3F3004634D8 /* LaunchScreen.storyboard in Resources */,
 				2273583B27F0E3F3004634D8 /* Assets.xcassets in Resources */,
 				2273584B27F0F6D6004634D8 /* DarkMatterTableViewCell.xib in Resources */,
+				2273584E27F1157A004634D8 /* TestData1.json in Resources */,
 				2273583927F0E3F1004634D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
