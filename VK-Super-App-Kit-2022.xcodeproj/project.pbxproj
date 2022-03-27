@@ -13,9 +13,13 @@
 		2273583927F0E3F1004634D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2273583727F0E3F1004634D8 /* Main.storyboard */; };
 		2273583B27F0E3F3004634D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2273583A27F0E3F3004634D8 /* Assets.xcassets */; };
 		2273583E27F0E3F3004634D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2273583C27F0E3F3004634D8 /* LaunchScreen.storyboard */; };
-		2273584A27F0F6D6004634D8 /* DarkMatterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2273584827F0F6D6004634D8 /* DarkMatterTableViewCell.swift */; };
-		2273584B27F0F6D6004634D8 /* DarkMatterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2273584927F0F6D6004634D8 /* DarkMatterTableViewCell.xib */; };
 		2273584E27F1157A004634D8 /* TestData1.json in Resources */ = {isa = PBXBuildFile; fileRef = 2273584D27F11579004634D8 /* TestData1.json */; };
+		2273585527F11826004634D8 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2273585327F11826004634D8 /* DateTableViewCell.swift */; };
+		2273585627F11826004634D8 /* DateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2273585427F11826004634D8 /* DateTableViewCell.xib */; };
+		2273585C27F11889004634D8 /* TimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2273585A27F11889004634D8 /* TimeTableViewCell.swift */; };
+		2273585D27F11889004634D8 /* TimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2273585B27F11889004634D8 /* TimeTableViewCell.xib */; };
+		2273586127F11914004634D8 /* TemperatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2273585F27F11914004634D8 /* TemperatureTableViewCell.swift */; };
+		2273586227F11914004634D8 /* TemperatureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2273586027F11914004634D8 /* TemperatureTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +31,13 @@
 		2273583A27F0E3F3004634D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2273583D27F0E3F3004634D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2273583F27F0E3F3004634D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2273584827F0F6D6004634D8 /* DarkMatterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkMatterTableViewCell.swift; sourceTree = "<group>"; };
-		2273584927F0F6D6004634D8 /* DarkMatterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DarkMatterTableViewCell.xib; sourceTree = "<group>"; };
 		2273584D27F11579004634D8 /* TestData1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestData1.json; sourceTree = "<group>"; };
+		2273585327F11826004634D8 /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		2273585427F11826004634D8 /* DateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTableViewCell.xib; sourceTree = "<group>"; };
+		2273585A27F11889004634D8 /* TimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewCell.swift; sourceTree = "<group>"; };
+		2273585B27F11889004634D8 /* TimeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableViewCell.xib; sourceTree = "<group>"; };
+		2273585F27F11914004634D8 /* TemperatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTableViewCell.swift; sourceTree = "<group>"; };
+		2273586027F11914004634D8 /* TemperatureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemperatureTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +83,9 @@
 		2273584527F0F674004634D8 /* DarkMatterCell */ = {
 			isa = PBXGroup;
 			children = (
-				2273584827F0F6D6004634D8 /* DarkMatterTableViewCell.swift */,
-				2273584927F0F6D6004634D8 /* DarkMatterTableViewCell.xib */,
+				2273585E27F118FC004634D8 /* TemperatureCell */,
+				2273585727F11854004634D8 /* TimeCell */,
+				2273585227F117E6004634D8 /* DateCell */,
 			);
 			path = DarkMatterCell;
 			sourceTree = "<group>";
@@ -114,6 +123,33 @@
 				2273583527F0E3F1004634D8 /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2273585227F117E6004634D8 /* DateCell */ = {
+			isa = PBXGroup;
+			children = (
+				2273585327F11826004634D8 /* DateTableViewCell.swift */,
+				2273585427F11826004634D8 /* DateTableViewCell.xib */,
+			);
+			path = DateCell;
+			sourceTree = "<group>";
+		};
+		2273585727F11854004634D8 /* TimeCell */ = {
+			isa = PBXGroup;
+			children = (
+				2273585A27F11889004634D8 /* TimeTableViewCell.swift */,
+				2273585B27F11889004634D8 /* TimeTableViewCell.xib */,
+			);
+			path = TimeCell;
+			sourceTree = "<group>";
+		};
+		2273585E27F118FC004634D8 /* TemperatureCell */ = {
+			isa = PBXGroup;
+			children = (
+				2273585F27F11914004634D8 /* TemperatureTableViewCell.swift */,
+				2273586027F11914004634D8 /* TemperatureTableViewCell.xib */,
+			);
+			path = TemperatureCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,10 +210,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2273586227F11914004634D8 /* TemperatureTableViewCell.xib in Resources */,
 				2273583E27F0E3F3004634D8 /* LaunchScreen.storyboard in Resources */,
+				2273585627F11826004634D8 /* DateTableViewCell.xib in Resources */,
 				2273583B27F0E3F3004634D8 /* Assets.xcassets in Resources */,
-				2273584B27F0F6D6004634D8 /* DarkMatterTableViewCell.xib in Resources */,
 				2273584E27F1157A004634D8 /* TestData1.json in Resources */,
+				2273585D27F11889004634D8 /* TimeTableViewCell.xib in Resources */,
 				2273583927F0E3F1004634D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,9 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2273585527F11826004634D8 /* DateTableViewCell.swift in Sources */,
 				2273583627F0E3F1004634D8 /* ViewController.swift in Sources */,
+				2273585C27F11889004634D8 /* TimeTableViewCell.swift in Sources */,
 				2273583227F0E3F1004634D8 /* AppDelegate.swift in Sources */,
-				2273584A27F0F6D6004634D8 /* DarkMatterTableViewCell.swift in Sources */,
+				2273586127F11914004634D8 /* TemperatureTableViewCell.swift in Sources */,
 				2273583427F0E3F1004634D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
