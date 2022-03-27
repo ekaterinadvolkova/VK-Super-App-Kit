@@ -52,6 +52,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 }
 
 struct CellContent {
-    let timeAndIndicator: String
+    let date: String
+    let time: String
+    let temperatureCelsius: Int
 }
 
