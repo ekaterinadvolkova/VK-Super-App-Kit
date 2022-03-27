@@ -16,8 +16,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Register 1 cell
-        table.register(DarkMatterTableViewCell.nib(), forCellReuseIdentifier: DarkMatterTableViewCell.identifier)
+        // Register 3 cells
+        table.register(DateTableViewCell.nib(), forCellReuseIdentifier: DateTableViewCell.identifier)
+        table.register(TimeTableViewCell.nib(), forCellReuseIdentifier: TimeTableViewCell.identifier)
+        table.register(TemperatureTableViewCell.nib(), forCellReuseIdentifier: TemperatureTableViewCell.identifier)
         
         table?.delegate = self
         table?.dataSource = self
@@ -51,9 +53,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
 }
 
-struct CellContent {
+struct CellContent: Codable {
     let date: String
     let time: String
-    let temperatureCelsius: Int
+    let temperature: Int
 }
 
