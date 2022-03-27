@@ -5,3 +5,9 @@
 * The cells contain time of the event and the sensor indications. <br>
 * The task is to write an MVP without using external dependencies.<br>
 
+## Solution
+Since the task did not mention the meaning of MVP, I assume it is a **Minimum viable product**, meaning the solution should be working with minimum requirements.
+
+The test data is generated in JSON format
+
+
