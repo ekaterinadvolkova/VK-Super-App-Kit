@@ -13,7 +13,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var models = [CellContent]()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,13 +35,49 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DarkMatterTableViewCell.identifier, for: indexPath) as! DarkMatterTableViewCell
-        
-         cell.configure(with: models[indexPath.row])
+        cell.configure(with: models[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45
+    }
+    
+    func createTableHeader() -> UIView{
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height/10))
+        
+        //background color for header
+        headerView.backgroundColor = .white
+        
+        
+        //add frames
+        var dateLabel = UILabel(frame: CGRect(x: -30, y: 10, width: view.frame.size.width/3, height: headerView.frame.size.height))
+        
+        var timeLabel = UILabel(frame: CGRect(x: 130, y: 10, width: view.frame.size.width/3, height: headerView.frame.size.height))
+        
+        var tempLabel = UILabel(frame: CGRect(x: 250, y: 10, width: view.frame.size.width/3, height: headerView.frame.size.height))
+        
+        //add subviews
+        headerView.addSubview(dateLabel)
+        headerView.addSubview(timeLabel)
+        headerView.addSubview(tempLabel)
+        
+        //make header text centered
+        dateLabel.textAlignment = .center
+        timeLabel.textAlignment = .center
+        tempLabel.textAlignment = .right
+        
+        //add text to header secrions
+        dateLabel.text = "Date"
+        timeLabel.text = "Time"
+        tempLabel.text = "Temperature"
+        
+        //add fonts
+        dateLabel.font = UIFont(name: "Helvetica-Bold", size: 20)
+        timeLabel.font = UIFont(name: "Helvetica-Bold", size: 20)
+        tempLabel.font = UIFont(name: "Helvetica-Bold", size: 20)
+        
+        return headerView
     }
     
     // Get data from a file and convert to models
@@ -54,9 +89,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //update user interface
         DispatchQueue.main.async {
             self.table.reloadData()
+            self.table.tableHeaderView = self.createTableHeader()
         }
     }
-    
     
     //function to decode json
     func loadJson(filename fileName: String) -> [CellContent]? {
