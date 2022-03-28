@@ -7,11 +7,13 @@
 
 ## Solution
 * Since the task did not mention the meaning of MVP, I assume it is a **Minimum Viable Product**
+* Since the sensor data type is also not specified I assume it will be the **temperature**
+* Therefore, I need to show on the UI date, time and temperature.
 * Generate random data in JSON format
 * Upload JSON to a project
-* Decode JSON into peoject models/structs
-* Update the UI asynchronously because the amount of data is supposed to be big
-* I tested the solution with 500 values in my JSON list. It seems to work fast 😊
+* Decode JSON into struct containing date, time and temperature.
+* Update the UI asynchronously because the amount of data is supposed to be huuge (mildly speaking)
+* I tested the solution with 500 values on iPhone device. It seems to work fast 😊
 
 ## Technologies used
 * Cocoa Pods
