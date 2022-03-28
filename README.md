@@ -12,7 +12,7 @@
 * Generate random data in JSON format
 * Upload JSON to a project
 * Decode JSON into struct containing date, time and temperature.
-* Update the UI asynchronously because the amount of data is supposed to be huuge (mildly speaking)
+* Update the UI with async func because the amount of data is supposed to be huge (mildly speaking)
 * I tested the solution with 500 values on iPhone device. It seems to work fast 😊
 
 ## Technologies used
