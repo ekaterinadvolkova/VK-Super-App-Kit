@@ -22,3 +22,6 @@
 
 ## Screens on the test device
 
+
+https://user-images.githubusercontent.com/62830083/160404507-1b7e99d6-2fbf-4212-b1b0-a7c5565b60ad.mov
+
