@@ -17,10 +17,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Register 3 cells
-        table.register(DateTableViewCell.nib(), forCellReuseIdentifier: DateTableViewCell.identifier)
-        table.register(TimeTableViewCell.nib(), forCellReuseIdentifier: TimeTableViewCell.identifier)
-        table.register(TemperatureTableViewCell.nib(), forCellReuseIdentifier: TemperatureTableViewCell.identifier)
+        // Register cell
+        table.register(DarkMatterTableViewCell.nib(), forCellReuseIdentifier: DarkMatterTableViewCell.identifier)
         
         table?.delegate = self
         table?.dataSource = self
@@ -37,21 +35,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: DarkMatterTableViewCell.identifier, for: indexPath) as! DarkMatterTableViewCell
+        
+         cell.configure(with: models[indexPath.row])
+        return cell
     }
     
     // Get data from a file and convert to models
     func getData(){
         
-        //get file path
-        let path = Bundle.main.path(forResource: "TestData1.json", ofType: nil)
-    
         //convert data to models
-        loadJson(filename: "TestData1")
+        models = loadJson(filename: "TestData1")!
         
         //update user interface
+        DispatchQueue.main.async {
+            self.table.reloadData()
+        }
     }
     
+    
+    //function to decode json
     func loadJson(filename fileName: String) -> [CellContent]? {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
             do {
@@ -70,8 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 struct CellContent: Decodable {
     let date: String
     let time: String
+    
+    //temperature value with key "alphanumeric" because fake data generator offered only this key availavle for free
     let alphanumeric: Int
 }
-
-
-

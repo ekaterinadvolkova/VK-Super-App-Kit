@@ -11,13 +11,13 @@ class TemperatureTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backgroundColor = .gray
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
     }
     
     //add cell identifier
@@ -26,5 +26,6 @@ class TemperatureTableViewCell: UITableViewCell {
     static func nib() -> UINib {
         return UINib(nibName: "TemperatureTableViewCell", bundle: nil)
     }
+
     
 }
