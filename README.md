@@ -9,8 +9,9 @@
 * Since the task did not mention the meaning of MVP, I assume it is a **Minimum Viable Product**
 * Generate random data in JSON format
 * Upload JSON to a project
-* Decode JSON
-* Update the UI asynchronously
+* Decode JSON into peoject models/structs
+* Update the UI asynchronously because the amount of data is supposed to be big
+* I tested the solution with 500 values in my JSON list. It seems to work fast 😊
 
 ## Technologies used
 * Cocoa Pods
