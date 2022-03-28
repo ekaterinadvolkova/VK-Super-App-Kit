@@ -15,13 +15,10 @@ class DarkMatterTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     //add cell identifier
@@ -32,6 +29,10 @@ class DarkMatterTableViewCell: UITableViewCell {
     }
     
     func configure (with model: CellContent){
+        self.dateLabel.textAlignment = .left
+        self.timeLabel.textAlignment = .left
+        self.dayTemperature.textAlignment = .left
+        
         self.dayTemperature.text = "\( Int(model.alphanumeric))°"
         self.dateLabel.text = "\(model.date)"
         self.timeLabel.text = "\(model.time)"
