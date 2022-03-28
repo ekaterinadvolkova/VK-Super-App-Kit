@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var models = [CellContent]()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,9 +27,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func viewDidAppear(_ animated: Bool){
-            super.viewDidAppear(animated)
-            getData()
-        }
+        super.viewDidAppear(animated)
+        getData()
+    }
     
     //Table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,21 +43,35 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Get data from a file and convert to models
     func getData(){
         
-        //validate that file exists
+        //get file path
         let path = Bundle.main.path(forResource: "TestData1.json", ofType: nil)
-        guard let data = path else {
-            print("something went wrong")
-            return
-        }
-        
+    
         //convert data to models
+        loadJson(filename: "TestData1")
+        
         //update user interface
+    }
+    
+    func loadJson(filename fileName: String) -> [CellContent]? {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode([CellContent].self, from: data)
+                return jsonData
+            } catch {
+                print("error:\(error)")
+            }
+        }
+        return nil
     }
 }
 
-struct CellContent: Codable {
+struct CellContent: Decodable {
     let date: String
     let time: String
-    let temperature: Int
+    let alphanumeric: Int
 }
+
+
 
