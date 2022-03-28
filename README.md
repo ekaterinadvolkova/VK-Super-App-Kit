@@ -1,4 +1,4 @@
-# VK Super AppKit Test Assignment
+# VK Super AppKit Test Assignment 
 
 ## Technical Task
 * A dark matter search app needs a table with several trillion cells on the screen. <br>
@@ -7,4 +7,15 @@
 
 ## Solution
 * Since the task did not mention the meaning of MVP, I assume it is a **Minimum Viable Product**
-* The test data is generated in JSON format
+* Generate random data in JSON format
+* Upload JSON to a project
+* Decode JSON
+* Update the UI asynchronously
+
+## Technologies used
+* Cocoa Pods
+* UIView
+* Protocols etc.
+
+## Screens on the test device
+
